@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         // Use double quotes when assigning environment variables
-        MINIO_ACCESS_KEY = asdnfikhasdfkhadskuhsadfhsdf
-        MINIO_SECRET_KEY = sdafkhi2973fi282913qih9q83ry9238
+        MINIO_ACCESS_KEY = 'asdnfikhasdfkhadskuhsadfhsdf'
+        MINIO_SECRET_KEY = 'sdafkhi2973fi282913qih9q83ry9238'
     }
     stages {
         stage('Show Credentials') {
