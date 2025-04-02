@@ -15,6 +15,8 @@ pipeline {
                         echo 'Access Key: $MINIO_ACCESS_KEY'
                         echo 'Secret Key: ********'  # Don't print secrets!
                     """
+                    echo "Access Key: ${MINIO_ACCESS_KEY}"
+                    echo 'Access Key: $MINIO_ACCESS_KEY'
                 }
             }
         }
@@ -22,7 +24,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                        mc alias set myminio http://192.168.100.51:9000 "$MINIO_ACCESS_KEY" "$MINIO_SECRET_KEY"
+                        mc alias set myminio http://192.168.100.51:9000 '$MINIO_ACCESS_KEY' '$MINIO_SECRET_KEY'
                         mc alias ls myminio
                     """
                 }
